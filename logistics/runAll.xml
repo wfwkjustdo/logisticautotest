@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- thread-count 定义同时启动的浏览器数 -->
+<suite name="LogisticsAutoTest" parallel="classes" thread-count="2">
+	<parameter name="chromeDriverPath" value=".\extral\chromedriver.exe" />
+	<parameter name="ieDriverPath" value=".\extral\IEDriver32bit.exe" />
+	<parameter name="136url" value="http://192.168.11.136:9080/logistics/index" />
+	<parameter name="localurl" value="http://localhost:8080/logistics/index" />
+	<!-- chrome,ie,firefox不区分大小写 -->
+	<parameter name="browserName" value="chrome" /> 
+	<!-- 页面元素30秒不出现超时时间 -->
+	<parameter name="timeOut" value="30" />
+	<!-- 等待页面完全加载完全的时间 -->
+	<parameter name="waitPageLoadTime" value="30" />
+	<!-- 识别对象时的超时时间。过了这个时间如果对象还没找到的话就会抛出NoSuchElement异常 -->
+	<parameter name="implicitlyWaitTime" value="20" />
+	<!-- 异步脚本的超时时间。webdriver可以异步执行脚本，这个是设置异步执行脚本脚本返回结果的超时时间 -->
+	<parameter name="setScriptTime" value="10" />
+	<!-- 这个是等待alert弹出的时间 单位毫秒 -->
+	<parameter name="waitMillisecondsForAlert" value="40000" />
+	<parameter name="username" value="AG0000095" />
+	<parameter name="passcode" value="123456" />
+	<parameter name="sleepTime" value="1000" />
+	<parameter name="incorrectname" value="AG00000998" />
+	<parameter name="incorrectpasscode" value="12345" />
+	
+  		<test name="首页" preserve-order="true" >
+			<packages>
+	   			<package name = "com.incito.logistics.testcase.home" />
+			</packages>
+ 		 </test> 
+ 		<test name="登录" preserve-order="true" >
+				<packages>
+	   				<package name = "org.incito.logistics.testcase.login" />
+				</packages>
+  		</test> 
+  
+	  <listeners>
+	    <!-- 网易arrow插件实现用例失败重跑以及生成测试报告 -->
+			<listener class-name="com.incito.logistics.util.TestResultListener" />
+			<listener class-name="com.netease.qa.testng.RetryListener" />
+			<listener class-name="com.netease.qa.testng.PowerEmailableReporter" />
+			
+	  </listeners>
+	  
+	      <!-- 用来禁止TestNg产生报告  
+    <usedefaultlisteners name="false" />
+			 -->
+  
+</suite> 
+
