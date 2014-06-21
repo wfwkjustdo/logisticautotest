@@ -4,7 +4,6 @@
 /test-output
 /*.bak
 /fileLog*
-/.classpath
 /.settings/
 
 
