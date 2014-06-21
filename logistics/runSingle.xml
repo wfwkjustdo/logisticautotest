@@ -38,7 +38,7 @@
 	</listeners>
 	 
     	  
-	      <!-- 用来禁止TestNg产生报告  
+	   <!-- 用来禁止TestNg产生报告  
     <usedefaultlisteners name="false" />
-			 -->
+			 --> 
 </suite> 
