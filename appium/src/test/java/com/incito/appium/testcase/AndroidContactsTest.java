@@ -1,22 +1,23 @@
 package com.incito.appium.testcase;
 
 import io.appium.java_client.AppiumDriver;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.net.URL;
 import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
 public class AndroidContactsTest {
     private AppiumDriver driver;
 
-    @Before
+    @BeforeClass
     public void setUp() throws Exception {
         // set up appium
         File classpathRoot = new File(System.getProperty("user.dir"));
@@ -33,7 +34,7 @@ public class AndroidContactsTest {
         driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
     }
 
-    @After
+    @AfterClass
     public void tearDown() throws Exception {
         driver.quit();
     }
@@ -46,7 +47,7 @@ public class AndroidContactsTest {
         textFieldsList.get(0).sendKeys("James");
         textFieldsList.get(1).sendKeys("18872573204");
         textFieldsList.get(2).sendKeys("398733146@qq.com");
-        driver.swipe(100, 500, 100, 100, 2);
+        //driver.swipe(100, 500, 100, 100, 2);
         driver.findElementByName("Save").click();
     }
 
