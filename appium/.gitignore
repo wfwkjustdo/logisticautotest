@@ -1,0 +1,7 @@
+/bin
+/target/
+/screenshot
+/test-output
+/*.bak
+/fileLog*
+/.settings/
