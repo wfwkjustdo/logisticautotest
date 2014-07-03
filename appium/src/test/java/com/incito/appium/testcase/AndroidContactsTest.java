@@ -14,6 +14,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.incito.appium.util.SetIME;
+
 public class AndroidContactsTest {
     private AppiumDriver driver;
 
@@ -36,15 +38,21 @@ public class AndroidContactsTest {
 
     @AfterClass
     public void tearDown() throws Exception {
+    	String setSAMSUNGIME =  "cmd.exe /c adb shell ime set com.samsung.inputmethod/.SamsungIME";
+      	new SetIME().setIMEByCMD(setSAMSUNGIME);
         driver.quit();
     }
 
     @Test
     public void addContact(){
+    	//设置输入法
+    	String setUTF7IME =  "cmd.exe /c adb shell ime set jp.jun_nama.test.utf7ime/.Utf7ImeService";
+    	new SetIME().setIMEByCMD(setUTF7IME);
+    	
         WebElement el = driver.findElement(By.name("Add Contact"));
         el.click();
         List<WebElement> textFieldsList = driver.findElementsByClassName("android.widget.EditText");
-        textFieldsList.get(0).sendKeys("James");
+        textFieldsList.get(0).sendKeys("王阳");
         textFieldsList.get(1).sendKeys("18872573204");
         textFieldsList.get(2).sendKeys("398733146@qq.com");
         //driver.swipe(100, 500, 100, 100, 2);
