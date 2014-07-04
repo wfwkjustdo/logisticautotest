@@ -21,7 +21,7 @@ public class BaseParpare {
 	try{
 			seleniumUtil.launchBrower(browserName, context);
 	}catch(Exception e){
-		System.out.println("Setup Failed！！-->>这是异常中的退出");
+		System.out.println("Setup Failed！！");
 		seleniumUtil.quit();
 	}
 	//设置一个testng上下文属性，将driver存起来，之后可以使用context随时取到
@@ -30,7 +30,7 @@ public class BaseParpare {
 
 	@AfterClass
 	public void afterClass() {
-		System.out.println("这是afterclass中的退出");
+
 		seleniumUtil.quit();
 	}
 
