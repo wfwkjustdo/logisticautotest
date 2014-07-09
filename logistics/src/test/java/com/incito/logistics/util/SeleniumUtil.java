@@ -29,7 +29,7 @@ public class SeleniumUtil   {
 	public WebDriver window=null;
 	  
 	  public  void launchBrower(String browserName,ITestContext context){
-		  String webUrl = context.getCurrentXmlTest().getParameter("136url");
+		  String webUrl = context.getCurrentXmlTest().getParameter("localurl");
 		  int waitPageLoadTime = Integer.valueOf(context.getCurrentXmlTest().getParameter("waitPageLoadTime"));
 		  SelectExplorer select = new SelectExplorer();
 		  driver = select.selectExplorerByName(browserName, context);	
