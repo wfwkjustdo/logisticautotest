@@ -35,11 +35,7 @@
 				<version>1.2.16</version>
 				<scope>provided</scope>
 			</dependency>
-	<dependency>
-		<groupId>com.netease.qa</groupId>
-	    <artifactId>arrow</artifactId>
-	     <version>0.0.1</version>
-	</dependency>
+
 			<dependency>
 				<groupId>com.thoughtworks.qdox</groupId>
 				<artifactId>qdox</artifactId>
