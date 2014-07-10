@@ -45,10 +45,10 @@
 			
 	  </dependencies>
 	  <build>
-	      		<sourceDirectory>src</sourceDirectory>
+	      		<sourceDirectory>src/test/java</sourceDirectory>
 		<resources>
 			<resource>
-				<directory>src</directory>
+				<directory>src/test/java</directory>
 				<filtering>true</filtering>
 				<includes>
 					<include>log4j.properties</include>
