@@ -4,7 +4,7 @@
 <suite name="LogisticsAutoTest" parallel="classes" thread-count="1">
 	<parameter name="chromeDriverPath" value=".\extral\chromedriver.exe" />
 	<parameter name="ieDriverPath" value=".\extral\IEDriver32bit.exe" />
-	<parameter name="136url" value="http://192.168.11.136:9080/logistics/index" />
+	<parameter name="136url" value="http://192.168.11.136:9080/web/index" />
 	<parameter name="localurl" value="http://localhost:8080/logistics/index" />
 	<!-- chrome,ie,firefox不区分大小写 -->
 	<parameter name="browserName" value="ie" /> 
