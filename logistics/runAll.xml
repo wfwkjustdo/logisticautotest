@@ -29,9 +29,10 @@
 	   			<package name = "com.incito.logistics.testcase.home" />
 			</packages>
  		 </test> 
+ 		 
  		<test name="登录" preserve-order="true" >
 				<packages>
-	   				<package name = "org.incito.logistics.testcase.login" />
+	   				<package name = "com.incito.logistics.testcase.login" />
 				</packages>
   		</test> 
   
