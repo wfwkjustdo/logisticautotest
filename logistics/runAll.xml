@@ -18,7 +18,7 @@
 	<parameter name="setScriptTime" value="10" />
 	<!-- 这个是等待alert弹出的时间 单位毫秒 -->
 	<parameter name="waitMillisecondsForAlert" value="40000" />
-	<parameter name="username" value="AG0000095" />
+	<parameter name="username" value="incito" />
 	<parameter name="passcode" value="123456" />
 	<parameter name="sleepTime" value="1000" />
 	<parameter name="incorrectname" value="AG00000998" />

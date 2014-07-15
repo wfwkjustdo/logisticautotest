@@ -10,7 +10,7 @@ public class HomePageHelper {
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_BUTTON_FREESEND);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_TAB_FINDCARS);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_LINK_HOME);
-		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_LINK_PERSONCEN);
+		//seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_LINK_PERSONCEN);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_LINK_FINDCARDS);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_LINK_FINDGOODS);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_LINK_MYORDER);
@@ -20,7 +20,7 @@ public class HomePageHelper {
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_TAB_FINDCARS);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_INPUT_ORDERNO);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_LEFT_TITLE);
-		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_LINK_CHANGEANOTHER);
+		//seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_LINK_CHANGEANOTHER);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_TEXT_FOOTER);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_AREAR_CARS1);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_LINK_MORE);
@@ -35,13 +35,13 @@ public class HomePageHelper {
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_TAB_TRACKGOODS).getText(),"物流跟踪");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_LEFT_TITLE).getText(),"智慧物流"+"\n"+"全球领先的物流信息平台");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_LINK_HOME).getText(),"首页");
-		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_LINK_PERSONCEN).getText(),"个人中心");
+		//seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_LINK_PERSONCEN).getText(),"个人中心");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_LINK_FINDCARDS).getText(),"找车源");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_LINK_FINDGOODS).getText(),"找货源");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_LINK_MYORDER).getText(),"我的订单");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_LINK_MYGOODS).getText(),"我的货源");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_LINK_MYCARDS).getText(),"我的车队");
-		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_TEXT_FOOTER).getText(),"联系我们 | 关于我们 | 帮助中心"+"\n"+"灵动信息技术有限公司 版权所有 鄂ICP证030173号"+"\n"+"客服热线 ：400-860-3060");
+		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_TEXT_FOOTER).getText(),"联系我们 | 关于我们 | 帮助中心"+"\n"+"灵动信息技术有限公司 版权所有 鄂ICP备13016476号"+"\n"+"客服热线 ：400-860-3060");
 			
 	}
 	

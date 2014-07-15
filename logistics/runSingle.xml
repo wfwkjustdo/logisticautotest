@@ -7,7 +7,7 @@
 	<parameter name="136url" value="http://192.168.11.136:9080/web/index" />
 	<parameter name="localurl" value="http://localhost:8080/logistics/index" />
 	<!-- chrome,ie,firefox不区分大小写 -->
-	<parameter name="browserName" value="ie" /> 
+	<parameter name="browserName" value="chrome" /> 
 	<!-- 页面元素30秒不出现超时时间 -->
 	<parameter name="timeOut" value="30" />
 	<!-- 等待页面完全加载完全的时间 -->
@@ -18,21 +18,21 @@
 	<parameter name="setScriptTime" value="10" />
 	<!-- 这个是等待alert弹出的时间 单位毫秒 -->
 	<parameter name="waitMillisecondsForAlert" value="40000" />
-	<parameter name="username" value="AG0000095" />
+	<parameter name="username" value="incito" />
 	<parameter name="passcode" value="123456" />
 	<parameter name="sleepTime" value="1000" />
 	<parameter name="incorrectname" value="AGXXXXXX" />
 	<parameter name="incorrectpasscode" value="12345" />
 	
-  <test name="汉字" preserve-order="true" >
+  <test name="singleTest" preserve-order="true" >
 	<classes>
-		<class name="com.incito.logistics.testcase.login.LoginPage_6_Fail_Incorrect_Username_Test" />
+		<class name="com.incito.logistics.testcase.home.HomePage_Login_14_AllTabClick_Test" />
 	</classes>
   </test> 
   
 	  <listeners>
 	  <!-- 网易arrow插件实现用例失败重跑以及生成测试报告 -->
-			<listener class-name="com.incito.logistics.util.TestResultListener" />
+			<listener class-name="com.netease.qa.testng.TestResultListener" />
 			<listener class-name="com.netease.qa.testng.RetryListener" />
 			<listener class-name="com.netease.qa.testng.PowerEmailableReporter" />
 	</listeners>

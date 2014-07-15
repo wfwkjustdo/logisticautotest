@@ -11,7 +11,7 @@ public class HomePage {
 	public static final By HP_BUTTON_EXIT= By.linkText("退出");
 	/** 首页几个tab：首页，个人中心，我的货源，我的订单....*/
 	public static final By HP_LINK_HOME = By.linkText("首页");
-	public static final By HP_LINK_PERSONCEN = By.linkText("个人中心");
+//	public static final By HP_LINK_PERSONCEN = By.linkText("个人中心");
 	public static final By HP_LINK_FINDCARDS= By.linkText("找车源");
 	public static final By HP_LINK_FINDGOODS= By.linkText("找货源");
 	public static final By HP_LINK_MYORDER = By.linkText("我的订单");
@@ -39,7 +39,7 @@ public class HomePage {
 	/**左上角的商标文字*/
 	public static final By HP_LEFT_TITLE = By.className("f-left");
 	/**首页上的换一批 2个*/
-	public static final By HP_LINK_CHANGEANOTHER = By.linkText("换一批");
+	//public static final By HP_LINK_CHANGEANOTHER = By.linkText("换一批");
 	/**底部footer文字*/
 	public static final By HP_TEXT_FOOTER = By.xpath("//*[@id='holder']/footer");
 	/**首页上的更多按钮*/

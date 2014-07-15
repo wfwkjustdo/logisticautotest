@@ -22,6 +22,8 @@ public class LoginPage {
 	public static final By LP_INPUT_CODE= By.id("checkcode");
 	/**登陆页面上的验证码显示区域*/
 	public static final By LP_LINK_NOTCLEAR = By.linkText("看不清？");
+	/**登陆页面上的提示语*/
+	public static final By LP_TEXT_NOTICE = By.xpath("//*[@id='loginform']/*/*/p");
 	
 
 }
