@@ -10,12 +10,10 @@ import com.incito.logistics.base.BaseParpare;
 import com.incito.logistics.pages.FindCarsPage;
 import com.incito.logistics.pages.HomePage;
 import com.incito.logistics.pages.LoginPage;
-import com.incito.logistics.pages.PersonCenterPage;
 import com.incito.logistics.pages.pageshelper.FindCarsPagerHelper;
 import com.incito.logistics.pages.pageshelper.HomePageHelper;
-import com.incito.logistics.pages.pageshelper.PersonCenterPageHelper;
 
-public class HomePage_Login_15_AllTabClick_Test extends BaseParpare{
+public class HomePage_Login_14_AllTabClick_Test extends BaseParpare{
 	
   @Test
   public void loginSuccessTest(ITestContext context) {
@@ -45,7 +43,7 @@ public class HomePage_Login_15_AllTabClick_Test extends BaseParpare{
 	public void verifyUserInfo(int timeOut,int sleepTime){
 		seleniumUtil.sleep(sleepTime);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_TEXT_USERINFO);
-		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_TEXT_USERINFO).getText(), "AG0000095 | 退出");
+		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_TEXT_USERINFO).getText(), "incito | 退出");
 	}
 	
 	//验证 每个tab 是否能点击进入
@@ -54,16 +52,16 @@ public class HomePage_Login_15_AllTabClick_Test extends BaseParpare{
 		seleniumUtil.waitForElementToLoad(timeOut, HomePage.HP_LINK_HOME);
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_LINK_HOME).getText(), "首页");
 		seleniumUtil.waitForElementToLoad(timeOut, HomePage.HP_TITLE_PUBLICCARS);
-		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_TITLE_PUBLICCARS).getText(), "公共车源换一批 更多>>");
+		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_TITLE_PUBLICCARS).getText(), "公共车源"+"\n"+"更多>>");
 		seleniumUtil.waitForElementToLoad(timeOut, HomePage.HP_TITLE_PUBLICGOODS);
-		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_TITLE_PUBLICGOODS).getText(), "公共货源换一批 ");
+		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_TITLE_PUBLICGOODS).getText(), "公共货源"+"\n"+"更多>>");
 		
 		//个人中心
-		seleniumUtil.waitForElementToLoad(timeOut, HomePage.HP_LINK_PERSONCEN);
-		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_LINK_PERSONCEN).getText(), "个人中心");
-		seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_LINK_PERSONCEN));
-		PersonCenterPageHelper.waitPCPageToLoad(timeOut,seleniumUtil);
-		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(PersonCenterPage.PCP_TEXT_BODY).getText(), "建设中...");
+//		seleniumUtil.waitForElementToLoad(timeOut, HomePage.HP_LINK_PERSONCEN);
+//		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_LINK_PERSONCEN).getText(), "个人中心");
+//		seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_LINK_PERSONCEN));
+//		PersonCenterPageHelper.waitPCPageToLoad(timeOut,seleniumUtil);
+//		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(PersonCenterPage.PCP_TEXT_BODY).getText(), "建设中...");
 		
 		//找车源
 		seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_TAB_FINDCARS));

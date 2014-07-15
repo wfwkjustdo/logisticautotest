@@ -12,7 +12,7 @@ import com.incito.logistics.pages.HomePage;
 import com.incito.logistics.pages.pageshelper.HomePageHelper;
 import com.incito.logistics.pages.pageshelper.LoginPageHelper;
 
-public class HomePage_NotLogin_10_More_Test extends BaseParpare {
+public class HomePage_NotLogin_9_More_Test extends BaseParpare {
 	@Test
 	public void clickMore(ITestContext context){
 		  int timeOut =Integer.valueOf(context.getCurrentXmlTest().getParameter("timeOut"));

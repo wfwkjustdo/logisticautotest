@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.incito.logistics.base.BaseParpare;
 import com.incito.logistics.pages.pageshelper.HomePageHelper;
 
-public class HomePage_NotLogin_7_UI_Test extends BaseParpare {
+public class HomePage_NotLogin_6_UI_Test extends BaseParpare {
 	@Test
 	public void uiTest(ITestContext context){
 		  int timeOut =Integer.valueOf(context.getCurrentXmlTest().getParameter("timeOut"));

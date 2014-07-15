@@ -13,13 +13,13 @@ import com.incito.logistics.pages.LoginPage;
 import com.incito.logistics.pages.pageshelper.HomePageHelper;
 import com.incito.logistics.pages.pageshelper.LoginPageHelper;
 
-public class HomePage_NotLogin_2_Findcar_Test extends BaseParpare {
+public class HomePage_NotLogin_1_Findcar_Test extends BaseParpare {
 	@Test
 	public void findCars(ITestContext context){
 		  int timeOut =Integer.valueOf(context.getCurrentXmlTest().getParameter("timeOut"));
 		  HomePageHelper.waitHomePageToLoad(timeOut, seleniumUtil);
 		  HomePageHelper.checkHomePageText(seleniumUtil);
-		  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_LINK_PERSONCEN));
+		  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_LINK_FINDCARDS));
 		  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
 		  LoginPageHelper.checkLoginPageText(seleniumUtil);
 		  seleniumUtil.click(seleniumUtil.findElementBy(LoginPage.LP_BUTTON_CLOSE));
