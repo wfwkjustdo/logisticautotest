@@ -28,11 +28,11 @@ public class SeleniumUtil   {
 	public WebDriver driver=null;
 	public WebDriver window=null;
 	  
-	  public  void launchBrower(String browserName,ITestContext context){
+	  public  void launchBrower(String browserName,ITestContext context,String platform){
 		  String webUrl = context.getCurrentXmlTest().getParameter("136url");
 		  int waitPageLoadTime = Integer.valueOf(context.getCurrentXmlTest().getParameter("waitPageLoadTime"));
 		  SelectExplorer select = new SelectExplorer();
-		  driver = select.selectExplorerByName(browserName, context);	
+		  driver = select.selectExplorerByName(browserName, context,platform);	
 		  //等待waitPageLoadTime秒后如果没有页面还是没有刷出来 就跑出异常
 		  try{
 		  hasLoadPageSucceeded(waitPageLoadTime);

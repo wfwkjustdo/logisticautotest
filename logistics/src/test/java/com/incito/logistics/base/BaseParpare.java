@@ -18,8 +18,10 @@ public class BaseParpare {
 		this.testContext = context;  
 		String browserName = context.getCurrentXmlTest().getParameter(
 				"browserName");
+		String platform = context.getCurrentXmlTest().getParameter(
+				"platform");
 	try{
-			seleniumUtil.launchBrower(browserName, context);
+			seleniumUtil.launchBrower(browserName, context,platform);
 	}catch(Exception e){
 		System.out.println("Setup Failed！！");
 		seleniumUtil.quit();
