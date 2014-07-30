@@ -3,9 +3,9 @@
 <!-- thread-count 定义同时启动的浏览器数 -->
 <suite name="LogisticsAutoTest" parallel="classes" thread-count="2">
     <!-- 设置系统平台:win/linux/mac -->
-    <parameter name="platform" value="WIN" />
+    <parameter name="platform" value="linux" />
     	<!-- chrome,ie,firefox不区分大小写 -->
-	<parameter name="browserName" value="ie32" /> 
+	<parameter name="browserName" value="chrome32" /> 
     <!-- windows平台chrome和ie driver -->
 	<parameter name="chromedriver_win32" value=".\extral\chromedriver_win32\chromedriver.exe" />
 	<parameter name="iedriver_win32" value=".\extral\iedriver_win32\iedriver.exe" />
