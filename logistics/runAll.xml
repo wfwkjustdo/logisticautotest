@@ -3,7 +3,7 @@
 <!-- thread-count 定义同时启动的浏览器数 -->
 <suite name="LogisticsAutoTest" parallel="classes" thread-count="2">
     <!-- 设置系统平台:win/linux/mac -->
-    <parameter name="platform" value="linux" />
+    <parameter name="platform" value="win" />
     	<!-- chrome,ie,firefox不区分大小写 -->
 	<parameter name="browserName" value="chrome32" /> 
     <!-- windows平台chrome和ie driver -->
@@ -18,6 +18,7 @@
 	<!-- 定义测试的站点地址 -->	
 	<parameter name="136url" value="http://192.168.11.136:9080/web/index" />
 	<parameter name="localurl" value="http://localhost:8080/logistics/index" />
+	<parameter name="" value="http://localhost:8080/logistics/index" />
 
 	<!-- 页面元素30秒不出现超时时间 -->
 	<parameter name="timeOut" value="30" />
