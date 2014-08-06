@@ -36,7 +36,6 @@ import com.thoughtworks.qdox.JavaDocBuilder;
 import com.thoughtworks.qdox.model.DocletTag;
 import com.thoughtworks.qdox.model.JavaClass;
 import com.thoughtworks.qdox.model.JavaMethod;
-
 import com.netease.qa.testng.utils.ConfigReader;
 
 /**
@@ -609,6 +608,7 @@ public class PowerEmailableReporter implements IReporter {
 	 * @return
 	 * @author hzjingcheng
 	 */
+	@SuppressWarnings("unused")
 	private String getClassComment(String className) {
 		JavaClass cls = builder.getClassByName(className);
 		return cls.getComment();
