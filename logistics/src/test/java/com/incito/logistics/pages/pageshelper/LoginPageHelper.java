@@ -12,7 +12,7 @@ public class LoginPageHelper {
 		seleniumUtil.waitForElementToLoad(timeOut,LoginPage.LP_INPUT_PASSCODE);
 	     seleniumUtil.waitForElementToLoad(timeOut,LoginPage.LP_BUTTON_LOGIN);
 	     seleniumUtil.waitForElementToLoad(timeOut,LoginPage.LP_LABEL_AUTO);
-	     seleniumUtil.waitForElementToLoad(timeOut,LoginPage.LP_TEXT_NOTICE);
+
 	     
 
 	}
@@ -23,7 +23,7 @@ public class LoginPageHelper {
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(LoginPage.LP_INPUT_PASSCODE).getAttribute("placeholder"),"密码");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(LoginPage.LP_BUTTON_LOGIN).getText(),"登录");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(LoginPage.LP_LABEL_AUTO).getText(),"下次自动登录");
-		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(LoginPage.LP_TEXT_NOTICE).getText(),"提示：如果您没有账号，请拨打客服热线400-860-3060");
+		
 		
 	}
 	
