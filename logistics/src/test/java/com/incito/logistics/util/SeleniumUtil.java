@@ -49,6 +49,7 @@ public class SeleniumUtil   {
 	 * */
 		public   void maxWindow(){
 			driver.manage().window().maximize();
+			driver.findElement(By.className("")).findElements(By.tagName("")).get(1).getText();
 			
 		}
 	
