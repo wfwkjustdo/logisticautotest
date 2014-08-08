@@ -27,7 +27,9 @@ public class SeleniumUtil   {
 	
 	public WebDriver driver=null;
 	public WebDriver window=null;
-	  
+	  /***
+	   * 启动浏览器并打开页面
+	   * */
 	  public  void launchBrower(String browserName,ITestContext context,String platform){
 		  String webUrl = context.getCurrentXmlTest().getParameter("testurl");
 		  int waitPageLoadTime = Integer.valueOf(context.getCurrentXmlTest().getParameter("waitPageLoadTime"));

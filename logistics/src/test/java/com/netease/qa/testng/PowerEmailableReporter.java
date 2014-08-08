@@ -608,6 +608,7 @@ public class PowerEmailableReporter implements IReporter {
 	 * @return
 	 * @author hzjingcheng
 	 */
+	@SuppressWarnings("unused")
 	private String getClassComment(String className) {
 		JavaClass cls = builder.getClassByName(className);
 		return cls.getComment();
