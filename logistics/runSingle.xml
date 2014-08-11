@@ -16,7 +16,7 @@
 	<!-- mac平台的 chrome driver -->
 	<parameter name="chromedriver_mac32" value=".\extral\chromedriver_mac32\chromedriver" />
 	<!-- 定义测试的站点地址 -->	
-	<parameter name="testurl" value=http://192.168.11.134:8080/web/index />
+	<parameter name="testurl" value="http://192.168.11.134:8080/web/index" />
 
 
 	<!-- 页面元素30秒不出现超时时间 -->
