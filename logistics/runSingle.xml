@@ -5,16 +5,16 @@
     <!-- 设置系统平台:win/linux/mac -->
     <parameter name="platform" value="win" />
     <!-- chrome32,chrome64,ie32,ie64,firefox不区分大小写 -->
-	<parameter name="browserName" value="firefox" /> 
+	<parameter name="browserName" value="chrome32" /> 
     <!-- windows平台chrome和ie driver -->
-	<parameter name="chromedriver_win32" value=".\extral\chromedriver_win32\chromedriver.exe" />
-	<parameter name="iedriver_win32" value=".\extral\iedriver_win32\iedriver.exe" />
-	<parameter name="iedriver_win64" value=".\extral\iedriver_win64\iedriver.exe" />
+	<parameter name="chromedriver_win32" value="./extral/chromedriver_win32/chromedriver.exe" />
+	<parameter name="iedriver_win32" value="./extral/iedriver_win32/iedriver.exe" />
+	<parameter name="iedriver_win64" value="./extral/iedriver_win64/iedriver.exe" />
 	<!-- linux平台的 chrome driver -->
-	<parameter name="chromedriver_linux32" value=".\extral\chromedriver_linux32\chromedriver" />
-	<parameter name="chromedriver_linux64" value=".\extral\chromedriver_linux64\chromedriver" />
+	<parameter name="chromedriver_linux32" value="./extral/chromedriver_linux32/chromedriver" />
+	<parameter name="chromedriver_linux64" value="./extral/chromedriver_linux64/chromedriver" />
 	<!-- mac平台的 chrome driver -->
-	<parameter name="chromedriver_mac32" value=".\extral\chromedriver_mac32\chromedriver" />
+	<parameter name="chromedriver_mac32" value="./extral/chromedriver_mac32/chromedriver" />
 	<!-- 定义测试的站点地址 -->	
 	<parameter name="testurl" value="http://192.168.11.134:8080/web/index" />
 
