@@ -20,6 +20,7 @@ public class BaseParpare {
 				"browserName");
 		String platform = context.getCurrentXmlTest().getParameter(
 				"platform");
+
 	try{
 			seleniumUtil.launchBrower(browserName, context,platform);
 	}catch(Exception e){
