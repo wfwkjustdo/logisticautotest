@@ -25,13 +25,14 @@ import org.testng.log4testng.Logger;
 
 import com.incito.logistics.pages.LoginPage;
 public class SeleniumUtil   {
-	public static Logger logger = Logger.getLogger(SeleniumUtil.class);
+	private static Logger logger = Logger.getLogger(SeleniumUtil.class);
 	public WebDriver driver=null;
 	public WebDriver window=null;
 	  /***
 	   * 启动浏览器并打开页面
 	   * */
 	  public  void launchBrower(String browserName,ITestContext context,String platform){
+
 		  String webUrl = context.getCurrentXmlTest().getParameter("testurl");
 		  int waitPageLoadTime = Integer.valueOf(context.getCurrentXmlTest().getParameter("waitPageLoadTime"));
 		  SelectExplorer select = new SelectExplorer();
@@ -39,6 +40,7 @@ public class SeleniumUtil   {
 		  //等待waitPageLoadTime秒后如果没有页面还是没有刷出来 就跑出异常
 		  try{
 		  hasLoadPageSucceeded(waitPageLoadTime);
+		  logger.info("打开121212："+webUrl);
 		  driver.get(webUrl);
 		  logger.info("打开："+webUrl);
 		  maxWindow();
