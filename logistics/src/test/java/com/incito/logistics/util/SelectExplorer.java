@@ -3,6 +3,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
@@ -25,8 +26,8 @@ public class SelectExplorer {
 		 case "win":
 		 if(browser.equalsIgnoreCase("ie32")){
 			  System.setProperty("webdriver.ie.driver", iedriver_win32);
-//			     DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
-//			     ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+			     DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
+			     ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 			    return  new InternetExplorerDriver();
 		 }else if(browser.equalsIgnoreCase("ie64")){
 			  System.setProperty("webdriver.ie.driver", iedriver_win64);
@@ -36,7 +37,10 @@ public class SelectExplorer {
 		 }else if(browser.equalsIgnoreCase("chrome32")){
 				System.setProperty("webdriver.chrome.driver",	 chromedriver_win32);
 				return  new ChromeDriver();
-		 }else{
+		 }else if(browser.equalsIgnoreCase("firefox")){
+			 return new FirefoxDriver();
+			 
+		 } else{
 			 
 			 System.out.println(browser+" is not applicate for "+ osName);
 			 
@@ -51,7 +55,11 @@ public class SelectExplorer {
 	}else if(browser.equalsIgnoreCase("chrome64")){
 		System.setProperty("webdriver.chrome.driver",	 chromedriver_linux64);
 		return  new ChromeDriver();
-	}else{
+	}else if(browser.equalsIgnoreCase("firefox")){
+		 return new FirefoxDriver();
+		 
+	 }
+	else{
 		 System.out.println(browser+" is not applicate for "+ osName);
 	}
 		 break;
@@ -60,6 +68,9 @@ public class SelectExplorer {
 		 if(browser.equalsIgnoreCase("mac32")){
 				System.setProperty("webdriver.chrome.driver",	 chromedriver_mac32);
 				return  new ChromeDriver();
+		 }else if(browser.equalsIgnoreCase("firefox")){
+			 return new FirefoxDriver();
+			 
 		 }else{
 			 System.out.println("no information for mac!");
 		 }

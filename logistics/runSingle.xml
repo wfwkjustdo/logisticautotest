@@ -5,7 +5,7 @@
     <!-- 设置系统平台:win/linux/mac -->
     <parameter name="platform" value="win" />
     <!-- chrome32,chrome64,ie32,ie64,firefox不区分大小写 -->
-	<parameter name="browserName" value="ie32" /> 
+	<parameter name="browserName" value="firefox" /> 
     <!-- windows平台chrome和ie driver -->
 	<parameter name="chromedriver_win32" value=".\extral\chromedriver_win32\chromedriver.exe" />
 	<parameter name="iedriver_win32" value=".\extral\iedriver_win32\iedriver.exe" />
