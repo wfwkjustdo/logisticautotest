@@ -117,7 +117,7 @@ public class TestResultListener extends TestListenerAdapter {
 		for (Iterator<ITestResult> iterator = testContext.getFailedTests().getAllResults().iterator(); iterator.hasNext();) {
 			ITestResult testResult = iterator.next();
 			if (testsToBeRemoved.contains(testResult)) {
-				logger.info("Remove repeat failed testcase = " + testResult.getName());
+				logger.info("移除重复失败的的测试用例= " + testResult.getName());
 				iterator.remove();
 			}
 		}
