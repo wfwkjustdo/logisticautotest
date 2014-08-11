@@ -25,8 +25,8 @@ public class SelectExplorer {
 		 case "win":
 		 if(browser.equalsIgnoreCase("ie32")){
 			  System.setProperty("webdriver.ie.driver", iedriver_win32);
-			     DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
-			     ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+//			     DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
+//			     ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 			    return  new InternetExplorerDriver();
 		 }else if(browser.equalsIgnoreCase("ie64")){
 			  System.setProperty("webdriver.ie.driver", iedriver_win64);
