@@ -22,7 +22,7 @@ public class BaseParpare {
 				"platform");
 
 	try{
-			seleniumUtil.launchBrower(browserName, context,platform);
+			seleniumUtil.launchBrower(browserName,context,platform);
 	}catch(Exception e){
 		System.out.println("Setup Failed！！");
 		seleniumUtil.quit();
