@@ -38,7 +38,7 @@ public class TestResultListener extends TestListenerAdapter {
 	@Override
 	public void onTestFailure(ITestResult tr) {
 		super.onTestFailure(tr);
-		logger.info(tr.getName() + " testcase runs FAILED!!");
+		logger.info(tr.getName() + " 用例执行失败...");
 		WebDriver webDriver = (WebDriver) testContext.getAttribute("SELENIUM_DRIVER");  //这里就是取driver
 		saveScreenShot(tr,webDriver);
 	}
@@ -47,7 +47,7 @@ public class TestResultListener extends TestListenerAdapter {
 	public void onTestSkipped(ITestResult tr) {
 		super.onTestSkipped(tr);
 		WebDriver webDriver = (WebDriver) testContext.getAttribute("SELENIUM_DRIVER");
-		logger.info(tr.getName() + " testcase was SKIPPED!!");	
+		logger.info(tr.getName() + " 用例被跳过...");	
 		saveScreenShot(tr,webDriver);
 	
 	}
@@ -55,13 +55,13 @@ public class TestResultListener extends TestListenerAdapter {
 	@Override
 	public void onTestSuccess(ITestResult tr) {
 		super.onTestSuccess(tr);
-		logger.info(tr.getName() + " testcase runs SUCCESSED!!");
+		logger.info(tr.getName() + " 用例执行成功...");
 	}
 
 	@Override
 	public void onTestStart(ITestResult tr) {
 		super.onTestStart(tr);
-		logger.info(tr.getName() + " testcase starts to RUN!!");
+		logger.info(tr.getName() + " 用例开始执行...");
 	}
 
 	@Override

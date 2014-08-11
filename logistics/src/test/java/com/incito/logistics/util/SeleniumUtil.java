@@ -21,10 +21,11 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestContext;
+import org.testng.log4testng.Logger;
 
 import com.incito.logistics.pages.LoginPage;
 public class SeleniumUtil   {
-	
+	public static Logger logger = Logger.getLogger(SeleniumUtil.class);
 	public WebDriver driver=null;
 	public WebDriver window=null;
 	  /***
@@ -39,10 +40,11 @@ public class SeleniumUtil   {
 		  try{
 		  hasLoadPageSucceeded(waitPageLoadTime);
 		  driver.get(webUrl);
+		  logger.info("打开："+webUrl);
 		  maxWindow();
 		  }catch(Exception e){
 			 refresh();
-			 System.out.println("刷新成功！！");
+		   logger.info("刷新成功");
 		  }
 
 	  }
