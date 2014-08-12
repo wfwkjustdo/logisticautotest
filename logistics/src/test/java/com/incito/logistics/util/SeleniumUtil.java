@@ -22,9 +22,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.log4testng.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import com.incito.logistics.pages.LoginPage;
-public class SeleniumUtil   {
+
+public class SeleniumUtil  {
+	static {
+	    PropertyConfigurator.configure("./config/log4j.properties");
+	}
 	private static Logger logger = Logger.getLogger(SeleniumUtil.class);
 	public WebDriver driver=null;
 	public WebDriver window=null;
@@ -32,7 +37,7 @@ public class SeleniumUtil   {
 	   * 启动浏览器并打开页面
 	   * */
 	  public  void launchBrower(String browserName,ITestContext context,String platform){
-
+			
 		  String webUrl = context.getCurrentXmlTest().getParameter("testurl");
 		  int waitPageLoadTime = Integer.valueOf(context.getCurrentXmlTest().getParameter("waitPageLoadTime"));
 		  SelectExplorer select = new SelectExplorer();
