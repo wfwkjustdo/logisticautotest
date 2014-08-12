@@ -28,12 +28,12 @@ public class SelectExplorer {
 			  System.setProperty("webdriver.ie.driver", iedriver_win32);
 			     DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
 			     ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-			    return  new InternetExplorerDriver();
+			    return  new InternetExplorerDriver(ieCapabilities);
 		 }else if(browser.equalsIgnoreCase("ie64")){
 			  System.setProperty("webdriver.ie.driver", iedriver_win64);
 			     DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
 			     ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-			    return  new InternetExplorerDriver();
+			    return  new InternetExplorerDriver(ieCapabilities);
 		 }else if(browser.equalsIgnoreCase("chrome32")){
 				System.setProperty("webdriver.chrome.driver",	 chromedriver_win32);
 				return  new ChromeDriver();
