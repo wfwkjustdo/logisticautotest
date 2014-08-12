@@ -28,7 +28,8 @@ import com.incito.logistics.pages.LoginPage;
 
 public class SeleniumUtil  {
 	static {
-	    PropertyConfigurator.configure("./config/log4j.properties");
+	    PropertyConfigurator.configure("config/log4j.properties");
+
 	}
 	private static Logger logger = Logger.getLogger(SeleniumUtil.class);
 	public WebDriver driver=null;
@@ -41,11 +42,11 @@ public class SeleniumUtil  {
 		  String webUrl = context.getCurrentXmlTest().getParameter("testurl");
 		  int waitPageLoadTime = Integer.valueOf(context.getCurrentXmlTest().getParameter("waitPageLoadTime"));
 		  SelectExplorer select = new SelectExplorer();
+		  logger.info("正在启动"+browserName+"...");
 		  driver = select.selectExplorerByName(browserName, context,platform);	
 		  //等待waitPageLoadTime秒后如果没有页面还是没有刷出来 就跑出异常
 		  try{
 		  hasLoadPageSucceeded(waitPageLoadTime);
-		  logger.info("打开121212："+webUrl);
 		  driver.get(webUrl);
 		  logger.info("打开："+webUrl);
 		  maxWindow();
