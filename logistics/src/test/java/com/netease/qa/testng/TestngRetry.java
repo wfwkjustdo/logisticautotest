@@ -20,9 +20,9 @@ public class TestngRetry implements IRetryAnalyzer {
 	static {
 		ConfigReader config = ConfigReader.getInstance();
 		maxRetryCount = config.getRetryCount();
-		logger.info("retrycount=" + maxRetryCount);
-		logger.info("sourceCodeDir=" + config.getSourceCodeDir());
-		logger.info("sourceCodeEncoding=" + config.getSrouceCodeEncoding());
+		logger.info("测试重试次数=" + maxRetryCount);
+		logger.info("测试代码目录=" + config.getSourceCodeDir());
+		logger.info("测试代码编码=" + config.getSrouceCodeEncoding());
 	}
 
 	public boolean retry(ITestResult result) {
