@@ -1,7 +1,0 @@
-﻿autoit_script 		java机器人脚本
-chromedriver_linux32 	linux平台的32位chrome driver
-chromedriver_linux64 	linux平台的64位chrome driver
-chromedriver_mac32   	mac平台的32位chrome driver
-chromedriver_win32  	windows平台的32位chrome driver
-iedriver_win32      	windows平台上的32位 ie driver
-iedriver_win64      	windows平台上的64位 ie driver
