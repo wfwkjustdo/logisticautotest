@@ -24,7 +24,7 @@ public class ConfigReader {
 	private static final String RETRYCOUNT = "retrycount";
 	private static final String SOURCEDIR = "sourcecodedir";
 	private static final String SOURCEENCODING = "sourcecodeencoding";
-	private static final String CONFIGFILE = "config.properties";
+	private static final String CONFIGFILE = "./config/config.properties";
 
 	private ConfigReader() {
 		readConfig(CONFIGFILE);
