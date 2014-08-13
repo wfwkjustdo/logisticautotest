@@ -6,5 +6,6 @@
 /.settings/
 /test-report
 /logs/*.log
+/logs
 
 
