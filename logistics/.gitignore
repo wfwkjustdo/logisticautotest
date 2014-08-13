@@ -3,8 +3,8 @@
 /screenshot
 /test-output
 /*.bak
-/testLog*
 /.settings/
 /test-report
+/logs/*.log
 
 
