@@ -1,11 +1,11 @@
 /bin
 /target/
-/screenshot
-/test-output
+/result/screenshot
+/result/test-report
 /*.bak
 /.settings/
-/test-report
-/logs/*.log
-/logs
+/test-output
+/result/log/*.log
+/result/log
 
 
