@@ -138,7 +138,7 @@ public class TestResultListener extends TestListenerAdapter {
         try {
             //这里可以调用不同框架的截图功能
             File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-            filePath = "screenshot/" + fileName + ".jpg";
+            filePath = "result/screenshot/" + fileName + ".jpg";
             File destFile = new File(filePath);
             FileUtils.copyFile(screenshot, destFile);
 
