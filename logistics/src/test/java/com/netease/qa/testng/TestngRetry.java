@@ -1,6 +1,7 @@
 package com.netease.qa.testng;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -13,6 +14,9 @@ import com.netease.qa.testng.utils.ConfigReader;
  *
  */
 public class TestngRetry implements IRetryAnalyzer {
+	static{
+	PropertyConfigurator.configure("./config/log4j.properties");
+	}
 	private static Logger logger = Logger.getLogger(TestngRetry.class);
 	private int retryCount = 1;
 	private static int maxRetryCount;
