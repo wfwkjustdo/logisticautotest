@@ -7,5 +7,6 @@
 /test-output
 /result/log/*.log
 /result/log
+/result
 
 
