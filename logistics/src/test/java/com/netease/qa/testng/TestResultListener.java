@@ -73,14 +73,14 @@ public class TestResultListener extends TestListenerAdapter {
 		// collect all id's from passed test
 		Set<Integer> passedTestIds = new HashSet<Integer>();
 		for (ITestResult passedTest : testContext.getPassedTests().getAllResults()) {
-			logger.info("SUCCESSED = " + passedTest.getName());
+			logger.info("执行通过的用例 = " + passedTest.getName());
 			passedTestIds.add(getId(passedTest));
 		}
 
 		// Eliminate the repeat methods
 		Set<Integer> skipTestIds = new HashSet<Integer>();
 		for (ITestResult skipTest : testContext.getSkippedTests().getAllResults()) {
-			logger.info("SKIPPED = " + skipTest.getName());
+			logger.info("跳过的用例 = " + skipTest.getName());
 			// id = class + method + dataprovider
 			int skipTestId = getId(skipTest);
 
@@ -94,7 +94,7 @@ public class TestResultListener extends TestListenerAdapter {
 		// Eliminate the repeat failed methods
 		Set<Integer> failedTestIds = new HashSet<Integer>();
 		for (ITestResult failedTest : testContext.getFailedTests().getAllResults()) {
-			logger.info("FAILED = " + failedTest.getName());
+			logger.info("执行失败的用例 = " + failedTest.getName());
 			// id = class + method + dataprovider
 			int failedTestId = getId(failedTest);
 
