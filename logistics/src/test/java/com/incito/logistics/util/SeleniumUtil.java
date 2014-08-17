@@ -48,8 +48,9 @@ public class SeleniumUtil  {
 		  logger.info("正在打开："+webUrl+"...");
 		  maxWindow();
 		  }catch(Exception e){
+			   logger.info("页面刷新中...");
 			 refresh();
-		   logger.info("刷新成功");
+		   logger.info("刷新成功...");
 		  }
 
 	  }
@@ -57,8 +58,9 @@ public class SeleniumUtil  {
 	 * 最大化浏览器操作
 	 * */
 		public   void maxWindow(){
+			logger.info("最大化浏览器中...");
 			driver.manage().window().maximize();
-	
+			logger.info("浏览器已经最大化...");
 			
 		}
 	
