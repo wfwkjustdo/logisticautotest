@@ -13,7 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -105,6 +105,7 @@ public class SeleniumUtil  {
 		 * */
 		public void sendKeys(WebElement element,String key){
 		 element.sendKeys(key);
+		 logger.info("输入了"+key);
 		}
 		
 		/**
@@ -118,10 +119,9 @@ public class SeleniumUtil  {
                     return driver.findElement(By).isDisplayed();
                 }
             });
-		}catch(NoSuchElementException  e){
-		   System.out.println("该元素没有显示出来");
-		   e.printStackTrace();
-	
+		}catch(TimeoutException  e){
+			logger.info("查找元素超时，"+timeOut+"秒后还没找到指定元素"+"【"+By.toString()+"】");
+			logger.error(e.getStackTrace());
 		}
 		}
 		
