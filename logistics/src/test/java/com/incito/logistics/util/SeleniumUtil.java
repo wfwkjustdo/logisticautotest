@@ -202,6 +202,7 @@ public class SeleniumUtil  {
 		 * */
 		public  void quit(){
 			driver.quit();
+			logger.info("浏览器已经退出...");
 		}
 		
 		/**
