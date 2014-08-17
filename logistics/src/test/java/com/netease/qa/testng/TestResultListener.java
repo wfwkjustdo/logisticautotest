@@ -141,9 +141,10 @@ public class TestResultListener extends TestListenerAdapter {
             filePath = "result/screenshot/" + fileName + ".jpg";
             File destFile = new File(filePath);
             FileUtils.copyFile(screenshot, destFile);
+            logger.info(fileName+"截图成功，保存在"+filePath);
 
         } catch (Exception e) {
-                filePath = fileName + " ,take Screentshot Failure:" + e.getMessage();
+                filePath = fileName + " ,截图失败，原因:" + e.getMessage();
                 logger.error(filePath);
         }
 

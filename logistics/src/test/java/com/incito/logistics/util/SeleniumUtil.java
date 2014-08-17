@@ -83,7 +83,12 @@ public class SeleniumUtil  {
 		 * */
 		public void click(WebElement element){
 		 element.click();		
+		 if(element.getText()!=null){
+		 	 logger.info("点击按钮："+element.getText());
+		 }
+		 
 		}
+			
 		
 		/**
 		 * 包装gettitle
@@ -97,7 +102,11 @@ public class SeleniumUtil  {
 		 * 包装清除操作
 		 * */
 		public void clear(WebElement element){
+//			String js="document.getElementById('u').value";
+
+				 logger.info(element.getText()+":被清除...");
 		 element.clear();
+
 		}
 		
 		/**
@@ -105,7 +114,7 @@ public class SeleniumUtil  {
 		 * */
 		public void sendKeys(WebElement element,String key){
 		 element.sendKeys(key);
-		 logger.info("输入了"+key);
+		 logger.info("输入:"+key);
 		}
 		
 		/**
