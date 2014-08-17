@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
@@ -22,16 +22,13 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestContext;
-import org.testng.log4testng.Logger;
 
 import com.incito.logistics.pages.LoginPage;
 
 public class SeleniumUtil  {
-	static {
-	    PropertyConfigurator.configure("config/log4j.properties");
+	//使用Log4j，第一步就是获取日志记录器，这个记录器将负责控制日志信息
+	public  static  Logger logger = Logger.getLogger(SeleniumUtil.class.getName());
 
-	}
-	public  static final Logger logger = Logger.getLogger (SeleniumUtil.class) ;
 	public WebDriver driver=null;
 	public WebDriver window=null;
 	  /***
@@ -42,17 +39,17 @@ public class SeleniumUtil  {
 		  String webUrl = context.getCurrentXmlTest().getParameter("testurl");
 		  int waitPageLoadTime = Integer.valueOf(context.getCurrentXmlTest().getParameter("waitPageLoadTime"));
 		  SelectExplorer select = new SelectExplorer();
-		  logger.warn("正在启动"+browserName+"...");
+		  logger.info("正在启动"+browserName+"...");
 		  driver = select.selectExplorerByName(browserName, context,platform);	
 		  //等待waitPageLoadTime秒后如果没有页面还是没有刷出来 就跑出异常
 		  try{
 		  hasLoadPageSucceeded(waitPageLoadTime);
 		  driver.get(webUrl);
-		  logger.warn("打开："+webUrl);
+		  logger.info("正在打开："+webUrl+"...");
 		  maxWindow();
 		  }catch(Exception e){
 			 refresh();
-		   logger.warn("刷新成功");
+		   logger.info("刷新成功");
 		  }
 
 	  }
