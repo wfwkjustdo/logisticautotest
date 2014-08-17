@@ -26,7 +26,7 @@ import org.testng.TestListenerAdapter;
  */
 public class TestResultListener extends TestListenerAdapter {
 
-	private static Logger logger = Logger.getLogger(TestResultListener.class);
+	private static Logger logger = Logger.getLogger(TestResultListener.class.getName());
     protected ITestContext testContext = null; //这里也是新加的
 	
 	@Override
