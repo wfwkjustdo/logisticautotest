@@ -1,13 +1,16 @@
 package com.incito.logistics.util;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
+
 public class SelectExplorer {
+	static Logger logger = Logger.getLogger(SelectExplorer.class.getName());
 	
 	public WebDriver  selectExplorerByName(String browser,ITestContext context,String platform ){
 		/**声明好驱动的路径*/
@@ -36,7 +39,7 @@ public class SelectExplorer {
 			 
 		 } else{
 			 
-			 System.out.println(browser+"浏览器 不适用于 "+ osName+"系统");
+			logger.error("["+browser+"]"+" 浏览器不适用于 "+ osName+"操作系统");
 			 
 		 }
 		 break;
@@ -50,7 +53,7 @@ public class SelectExplorer {
 		 return new FirefoxDriver();
 	 }
 	else{
-		 System.out.println(browser+"浏览器 不适用于 "+ osName+"系统");
+		logger.error("["+browser+"]"+" 浏览器不适用于 "+ osName+"操作系统");
 	}
 		 break;
 		 
@@ -62,12 +65,12 @@ public class SelectExplorer {
 			 return new FirefoxDriver();
 			 
 		 }else{
-			 System.out.println(browser+"浏览器 不适用于 "+ osName+"系统");
+			 logger.error("["+browser+"]"+" 浏览器不适用于 "+ osName+"操作系统");
 		 }
 		 break;
 		 
 		 default:
-			 System.out.println("你所选择的平台："+platform+"不被支持！");
+			 logger.error("你所选择的平台："+" ["+platform+"] "+"不被支持！");
 			break;
 		 }
 		 
