@@ -1,5 +1,6 @@
 package com.incito.logistics.base;
 
+import org.apache.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -7,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import com.incito.logistics.util.SeleniumUtil;
 
 public class BaseParpare {
+	static Logger logger = Logger.getLogger(BaseParpare.class.getName());
 	protected SeleniumUtil seleniumUtil = null;
 	/*添加成员变量来获取beforeClass传入的context参数*/
 	protected ITestContext testContext = null;
@@ -24,7 +26,7 @@ public class BaseParpare {
 	try{
 			seleniumUtil.launchBrower(browserName,context,platform);
 	}catch(Exception e){
-		System.out.println("Setup Failed！！");
+		logger.info("launchBrower失败...");
 		seleniumUtil.quit();
 	}
 	//设置一个testng上下文属性，将driver存起来，之后可以使用context随时取到
