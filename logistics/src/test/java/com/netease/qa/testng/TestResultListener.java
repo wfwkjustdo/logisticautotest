@@ -141,7 +141,7 @@ public class TestResultListener extends TestListenerAdapter {
             filePath = "result/screenshot/" + fileName + ".jpg";
             File destFile = new File(filePath);
             FileUtils.copyFile(screenshot, destFile);
-            logger.info(fileName+"截图成功，保存在"+filePath);
+            logger.info(fileName+"截图成功，保存在："+"[ "+filePath+" ]");
 
         } catch (Exception e) {
                 filePath = fileName + " ,截图失败，原因:" + e.getMessage();
@@ -152,7 +152,7 @@ public class TestResultListener extends TestListenerAdapter {
              Reporter.setCurrentTestResult(tr);
              Reporter.log(filePath);
              //把截图写入到Html报告中方便查看
-             Reporter.log("<img src=\"../" + filePath + "\"/>");
+             Reporter.log("<img src=\"../../" + filePath + "\"/>");
         }
  }
 
