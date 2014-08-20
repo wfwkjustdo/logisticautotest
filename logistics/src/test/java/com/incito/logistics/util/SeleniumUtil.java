@@ -83,10 +83,8 @@ public class SeleniumUtil  {
 		 * */
 		public void click(WebElement element){
 		 element.click();		
-		 if(element.getText()!=null){
-		 	 logger.info("点击按钮："+element.getText());
-		 }
-		 
+		 logger.info("点击按钮："+element.getText());
+
 		}
 			
 		
