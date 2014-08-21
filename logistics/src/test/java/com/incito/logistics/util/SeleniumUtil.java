@@ -48,7 +48,7 @@ public class SeleniumUtil  {
 		  logger.info("正在打开："+webUrl+"...");
 		  maxWindow();
 		  }catch(Exception e){
-			   logger.info("页面刷新中...");
+			logger.info("页面刷新中...");
 			 refresh();
 		   logger.info("刷新成功...");
 		  }
@@ -83,7 +83,7 @@ public class SeleniumUtil  {
 		 * */
 		public void click(WebElement element){
 		 element.click();		
-		// logger.info("点击按钮："+element.getText());
+		 logger.info("点击按钮："+element.getText());
 
 		}
 			
@@ -100,10 +100,10 @@ public class SeleniumUtil  {
 		 * 包装清除操作
 		 * */
 		public void clear(WebElement element){
-//			String js="document.getElementById('u').value";
+
 
 				 logger.info(element.getText()+":被清除...");
-		 element.clear();
+				 element.clear();
 
 		}
 		
@@ -136,7 +136,10 @@ public class SeleniumUtil  {
 		 * 判断文本是不是相同
 		 * **/
 		public void isTextEquals(String actual,String expected){
+		
 			Assert.assertEquals(actual,expected); 
+		
+
 		}
 		
 		/**
@@ -187,6 +190,7 @@ public class SeleniumUtil  {
 		 * */
 		public void sleep(int sleepTime){
 			try {
+				logger.info("进程休眠"+sleepTime+"秒");
 				Thread.sleep(sleepTime);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
