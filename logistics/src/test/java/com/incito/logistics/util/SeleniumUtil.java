@@ -83,9 +83,9 @@ public class SeleniumUtil  {
 		 * */
 		public void click(WebElement element){
 		 element.click();		
-		 logger.info("点击按钮："+element.getText());
-
-		}
+		 //logger.info("点击按钮："+element.getText());
+		 }
+		
 			
 		
 		/**
@@ -101,9 +101,11 @@ public class SeleniumUtil  {
 		 * */
 		public void clear(WebElement element){
 
-
-				 logger.info(element.getText()+":被清除...");
+	
+//				 logger.info(element.getText()+":被清除...");
 				 element.clear();
+			
+				
 
 		}
 		
@@ -190,7 +192,7 @@ public class SeleniumUtil  {
 		 * */
 		public void sleep(int sleepTime){
 			try {
-				logger.info("进程休眠"+sleepTime+"秒");
+				logger.info("进程休眠"+sleepTime/1000+"秒");
 				Thread.sleep(sleepTime);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
