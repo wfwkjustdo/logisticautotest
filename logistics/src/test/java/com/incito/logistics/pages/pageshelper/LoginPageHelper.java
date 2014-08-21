@@ -19,7 +19,7 @@ public class LoginPageHelper {
 	
 	/**检查该页面上的文本*/
 	public static void checkLoginPageText(SeleniumUtil seleniumUtil){
-		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(LoginPage.LP_INPUT_USERNAME).getAttribute("placeholder"),"用户名");
+		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(LoginPage.LP_INPUT_USERNAME).getAttribute("placeholder"),"户名");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(LoginPage.LP_INPUT_PASSCODE).getAttribute("placeholder"),"密码");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(LoginPage.LP_BUTTON_LOGIN).getText(),"登录");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(LoginPage.LP_LABEL_AUTO).getText(),"下次自动登录");
