@@ -39,7 +39,7 @@ public class SelectExplorer {
 			 
 		 } else{
 			 
-			logger.error("["+browser+"]"+" 浏览器不适用于 "+ osName+"操作系统");
+			logger.error("["+browser+"]"+" explorer does not apply to  "+ osName+"OS");
 			 
 		 }
 		 break;
@@ -53,7 +53,7 @@ public class SelectExplorer {
 		 return new FirefoxDriver();
 	 }
 	else{
-		logger.error("["+browser+"]"+" 浏览器不适用于 "+ osName+"操作系统");
+		logger.error("["+browser+"]"+" explorer does not apply to  "+ osName+"OS");
 	}
 		 break;
 		 
@@ -65,12 +65,12 @@ public class SelectExplorer {
 			 return new FirefoxDriver();
 			 
 		 }else{
-			 logger.error("["+browser+"]"+" 浏览器不适用于 "+ osName+"操作系统");
+				logger.error("["+browser+"]"+" explorer does not apply to  "+ osName+"OS");
 		 }
 		 break;
 		 
 		 default:
-			 logger.error("你所选择的平台："+" ["+platform+"] "+"不被支持！");
+			 logger.error("The platfrom that you selected"+" ["+platform+"] "+"was not supported!");
 			break;
 		 }
 		 
