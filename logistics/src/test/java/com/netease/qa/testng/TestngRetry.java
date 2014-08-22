@@ -24,15 +24,15 @@ public class TestngRetry implements IRetryAnalyzer {
 	static {
 		ConfigReader config = ConfigReader.getInstance();
 		maxRetryCount = config.getRetryCount();
-		logger.info("测试重试次数=" + maxRetryCount);
-		logger.info("测试代码目录=" + config.getSourceCodeDir());
-		logger.info("测试代码编码=" + config.getSrouceCodeEncoding());
+		logger.info("RetryCount=" + maxRetryCount);
+		logger.info("SourceDir=" + config.getSourceCodeDir());
+		logger.info("SourceEncoding=" + config.getSrouceCodeEncoding());
 	}
 
 	public boolean retry(ITestResult result) {
 		if (retryCount <= maxRetryCount) {
-			String message = "重跑： [" + result.getName() + "] on class [" + result.getTestClass().getName() + "] 重跑 "
-					+ retryCount + " 次";
+			String message = "Retry for： [" + result.getName() + "] on class [" + result.getTestClass().getName() + "] retry "
+					+ retryCount + " times";
 			logger.info(message);
 			Reporter.setCurrentTestResult(result);
 			Reporter.log("RunCount=" + (retryCount + 1));
