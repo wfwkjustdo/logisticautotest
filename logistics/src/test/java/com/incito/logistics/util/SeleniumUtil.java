@@ -15,6 +15,7 @@ import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -124,14 +125,15 @@ public class SeleniumUtil {
 	 * 在给定的时间内去查找元素，如果没找到则超时
 	 * */
 	public void waitForElementToLoad(int timeOut, final By By) {
-	
+
 			(new WebDriverWait(driver, timeOut)).until(new ExpectedCondition<Boolean>() {
 
 						public Boolean apply(WebDriver driver) {
 							return driver.findElement(By).isDisplayed();
 						}
 					});
-
+	
+	
 
 	}
 

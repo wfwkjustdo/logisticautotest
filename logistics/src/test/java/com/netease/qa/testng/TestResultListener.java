@@ -141,7 +141,7 @@ public class TestResultListener extends TestListenerAdapter {
             filePath = "result/screenshot/" + fileName + ".jpg";
             File destFile = new File(filePath);
             FileUtils.copyFile(screenshot, destFile);
-            logger.info(fileName+"screenshot successfully，saved："+"[ "+filePath+" ]");
+            logger.info(fileName+" screenshot successfully，saved："+"[ "+filePath+" ]");
 
         } catch (Exception e) {
                 filePath = fileName + " ,screenshot failed，the reason:" + e.getMessage();
