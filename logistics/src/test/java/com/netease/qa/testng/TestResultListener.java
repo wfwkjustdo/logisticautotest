@@ -38,7 +38,7 @@ public class TestResultListener extends TestListenerAdapter {
 	@Override
 	public void onTestFailure(ITestResult tr) {
 		super.onTestFailure(tr);
-		logger.info(tr.getName() + " 用例执行失败...");
+		logger.info(tr.getName() + " test case runs failed!");
 		WebDriver webDriver = (WebDriver) testContext.getAttribute("SELENIUM_DRIVER");  //这里就是取driver
 		saveScreenShot(tr,webDriver);
 	}
@@ -47,7 +47,7 @@ public class TestResultListener extends TestListenerAdapter {
 	public void onTestSkipped(ITestResult tr) {
 		super.onTestSkipped(tr);
 		WebDriver webDriver = (WebDriver) testContext.getAttribute("SELENIUM_DRIVER");
-		logger.info(tr.getName() + " 用例被跳过...");	
+		logger.info(tr.getName() + " test case was skipped");	
 		saveScreenShot(tr,webDriver);
 	
 	}
@@ -55,13 +55,13 @@ public class TestResultListener extends TestListenerAdapter {
 	@Override
 	public void onTestSuccess(ITestResult tr) {
 		super.onTestSuccess(tr);
-		logger.info(tr.getName() + " 用例执行成功...");
+		logger.info(tr.getName() + " test case runs successfully");
 	}
 
 	@Override
 	public void onTestStart(ITestResult tr) {
 		super.onTestStart(tr);
-		logger.info(tr.getName() + " 用例开始执行...");
+		logger.info(tr.getName() + " test case start running");
 	}
 
 	@Override
@@ -73,14 +73,14 @@ public class TestResultListener extends TestListenerAdapter {
 		// collect all id's from passed test
 		Set<Integer> passedTestIds = new HashSet<Integer>();
 		for (ITestResult passedTest : testContext.getPassedTests().getAllResults()) {
-			logger.info("执行通过的用例 = " + passedTest.getName());
+			logger.info("Passed= " + passedTest.getName());
 			passedTestIds.add(getId(passedTest));
 		}
 
 		// Eliminate the repeat methods
 		Set<Integer> skipTestIds = new HashSet<Integer>();
 		for (ITestResult skipTest : testContext.getSkippedTests().getAllResults()) {
-			logger.info("跳过的用例 = " + skipTest.getName());
+			logger.info("Skipped = " + skipTest.getName());
 			// id = class + method + dataprovider
 			int skipTestId = getId(skipTest);
 
@@ -94,7 +94,7 @@ public class TestResultListener extends TestListenerAdapter {
 		// Eliminate the repeat failed methods
 		Set<Integer> failedTestIds = new HashSet<Integer>();
 		for (ITestResult failedTest : testContext.getFailedTests().getAllResults()) {
-			logger.info("执行失败的用例 = " + failedTest.getName());
+			logger.info("Failed = " + failedTest.getName());
 			// id = class + method + dataprovider
 			int failedTestId = getId(failedTest);
 
@@ -117,7 +117,7 @@ public class TestResultListener extends TestListenerAdapter {
 		for (Iterator<ITestResult> iterator = testContext.getFailedTests().getAllResults().iterator(); iterator.hasNext();) {
 			ITestResult testResult = iterator.next();
 			if (testsToBeRemoved.contains(testResult)) {
-				logger.info("移除重复失败的的测试用例= " + testResult.getName());
+				logger.info("Removed repeat faild test case = " + testResult.getName());
 				iterator.remove();
 			}
 		}
@@ -141,10 +141,10 @@ public class TestResultListener extends TestListenerAdapter {
             filePath = "result/screenshot/" + fileName + ".jpg";
             File destFile = new File(filePath);
             FileUtils.copyFile(screenshot, destFile);
-            logger.info(fileName+"截图成功，保存在："+"[ "+filePath+" ]");
+            logger.info(fileName+"screenshot successfully，saved："+"[ "+filePath+" ]");
 
         } catch (Exception e) {
-                filePath = fileName + " ,截图失败，原因:" + e.getMessage();
+                filePath = fileName + " ,screenshot failed，the reason:" + e.getMessage();
                 logger.error(filePath);
         }
 
