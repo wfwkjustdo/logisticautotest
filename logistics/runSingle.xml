@@ -33,7 +33,7 @@
 	
   <test name="singleTest" preserve-order="true" >
 	<classes>
-		<class name="com.incito.logistics.testcase.login.LoginPage_1_UI_Test" />
+		<class name="com.incito.logistics.testcase.home.HomePage_NotLogin_1_Findcar_Test" />
 	</classes>
   </test> 
   
