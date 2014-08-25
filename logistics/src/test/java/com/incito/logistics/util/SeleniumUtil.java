@@ -141,6 +141,21 @@ public class SeleniumUtil {
 	
 
 	}
+	/**
+	 * 当jquery正在读取或处理比较大的json文件的时候，怎样判断它的读取活动已经完成
+	 */
+	
+	public void waitForAjaxDone(int timeOut){
+    (new WebDriverWait(driver, timeOut))
+            .until(new ExpectedCondition<Boolean>() {
+                @Override
+                public Boolean apply(WebDriver d) { 
+                    JavascriptExecutor js = (JavascriptExecutor)d;
+                    return (Boolean)js.executeScript("return jQuery.active == 0");  //Jquery.active=0表示ajax活动已经完成
+                }
+            });
+	
+	}
 
 	/**
 	 * 判断文本是不是相同
@@ -418,5 +433,10 @@ public class SeleniumUtil {
 				.pageLoadTimeout(pageLoadTime, TimeUnit.SECONDS);
 
 	}
+	
+	
+
+
+	
 
 }
