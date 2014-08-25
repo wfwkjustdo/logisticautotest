@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
+import org.testng.ITestResult;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -26,12 +26,13 @@ import org.testng.Assert;
 import org.testng.ITestContext;
 
 import com.incito.logistics.pages.LoginPage;
+import com.netease.qa.testng.TestResultListener;
 
 public class SeleniumUtil {
 	// 使用Log4j，第一步就是获取日志记录器，这个记录器将负责控制日志信息
 	public static Logger logger = Logger
 			.getLogger(SeleniumUtil.class.getName());
-
+	public ITestResult it= null;
 	public WebDriver driver = null;
 	public WebDriver window = null;
 
@@ -125,14 +126,18 @@ public class SeleniumUtil {
 	 * 在给定的时间内去查找元素，如果没找到则超时
 	 * */
 	public void waitForElementToLoad(int timeOut, final By By) {
-
+		try{
 			(new WebDriverWait(driver, timeOut)).until(new ExpectedCondition<Boolean>() {
 
 						public Boolean apply(WebDriver driver) {
 							return driver.findElement(By).isDisplayed();
 						}
 					});
-	
+		}catch(TimeoutException e){
+		logger.error("Time Out!! "+timeOut+" seconds passed and ["+By.toString()+" ] has not found yet!");
+		new TestResultListener().onTestFailure(it);
+		quit();
+		}
 	
 
 	}
