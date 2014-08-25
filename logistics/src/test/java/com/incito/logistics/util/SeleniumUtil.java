@@ -146,6 +146,7 @@ public class SeleniumUtil {
 	 */
 	
 	public void waitForAjaxDone(int timeOut){
+		try{
     (new WebDriverWait(driver, timeOut))
             .until(new ExpectedCondition<Boolean>() {
                 @Override
@@ -154,6 +155,12 @@ public class SeleniumUtil {
                     return (Boolean)js.executeScript("return jQuery.active == 0");  //Jquery.active=0表示ajax活动已经完成
                 }
             });
+    }catch(TimeoutException e){
+    	logger.error("Time out!! "+timeOut+" seconds passed and the jquery satate ：[!=0]" );
+    	new TestResultListener().onTestFailure(it);
+    	quit();
+    	
+    }
 	
 	}
 
