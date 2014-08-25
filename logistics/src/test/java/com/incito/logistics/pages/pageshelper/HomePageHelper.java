@@ -7,6 +7,7 @@ public class HomePageHelper {
 	/**等待页面上某个重要元素显示出来*/
 	public static void  waitHomePageToLoad(int timeOut,SeleniumUtil seleniumUtil){
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_BUTTON_LOGIN);
+		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_BUTTON_REG);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_BUTTON_FREESEND);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_TAB_FINDCARS);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_LINK_HOME);
@@ -30,6 +31,7 @@ public class HomePageHelper {
 	public static void checkHomePageText(SeleniumUtil seleniumUtil){
 		seleniumUtil.isTextEquals( seleniumUtil.getTitle(), "logistics - 物流管理");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_BUTTON_LOGIN).getText(),"登录");
+		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_BUTTON_REG).getText(),"注册");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_BUTTON_FREESEND).getText(),"免费发布货源");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_TAB_FINDCARS).getText(),"找车源");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_TAB_TRACKGOODS).getText(),"物流跟踪");
