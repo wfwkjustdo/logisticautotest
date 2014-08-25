@@ -16,11 +16,13 @@ public class LoginPage_1_UI_Test extends BaseParpare {
 	@Test
 	public void uiTest(ITestContext context){
 		  int timeOut =Integer.valueOf(context.getCurrentXmlTest().getParameter("timeOut"));
-		  HomePageHelper.waitHomePageToLoad(timeOut,seleniumUtil);
-		  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_BUTTON_LOGIN));
-		  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
-		  LoginPageHelper.checkLoginPageText(seleniumUtil);
-		  LoginPageHelper.isInputCorrect(seleniumUtil);
+	
+			  HomePageHelper.waitHomePageToLoad(timeOut,seleniumUtil);
+			  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_BUTTON_LOGIN));
+			  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
+			  LoginPageHelper.checkLoginPageText(seleniumUtil);
+			  LoginPageHelper.isInputCorrect(seleniumUtil);
+
 	}
 
 }
