@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 public class HomePage {
 	/**首页登陆按钮*/
 	public static final By HP_BUTTON_LOGIN = By.id("login");
+	/**首页注册按钮*/
+	public static final By HP_BUTTON_REG = By.linkText("注册");
 	/**首页登陆上的退出按钮*/
 	public static final By HP_BUTTON_EXIT= By.linkText("退出");
 	/** 首页几个tab：首页，个人中心，我的货源，我的订单....*/
