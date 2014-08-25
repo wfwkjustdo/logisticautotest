@@ -19,7 +19,7 @@ public class LoginPage_8_EXIT_Test extends BaseParpare{
 	  String passcode = context.getCurrentXmlTest().getParameter("passcode");
 	  int timeOut =Integer.valueOf(context.getCurrentXmlTest().getParameter("timeOut"));
 	  int sleepTime =Integer.valueOf(context.getCurrentXmlTest().getParameter("sleepTime"));
-	  
+
 	  HomePageHelper.waitHomePageToLoad(timeOut,seleniumUtil);
 	  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_BUTTON_LOGIN));
 	  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
