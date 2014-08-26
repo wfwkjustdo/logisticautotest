@@ -1,5 +1,7 @@
 package com.incito.logistics.pages.pageshelper;
 
+import org.openqa.selenium.By;
+
 import com.incito.logistics.pages.HomePage;
 import com.incito.logistics.util.SeleniumUtil;
 
@@ -45,6 +47,13 @@ public class HomePageHelper {
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_LINK_MYCARDS).getText(),"我的车队");
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_TEXT_FOOTER).getText(),"联系我们 | 关于我们 | 帮助中心"+"\n"+"灵动信息技术有限公司 版权所有 鄂ICP备13016476号"+"\n"+"客服热线 ：400-860-3060");
 			
+	}
+	
+	/**从首页进入指定的页面-根据元素定位来确定什么页面*/
+	public static void enterPage(SeleniumUtil seleniumUtil,By elementLocator){
+		seleniumUtil.click(seleniumUtil.findElementBy(elementLocator));
+		
+		
 	}
 	
 
