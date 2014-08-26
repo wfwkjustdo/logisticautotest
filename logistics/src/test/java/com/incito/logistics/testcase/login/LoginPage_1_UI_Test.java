@@ -18,7 +18,7 @@ public class LoginPage_1_UI_Test extends BaseParpare {
 		  int timeOut =Integer.valueOf(context.getCurrentXmlTest().getParameter("timeOut"));
 
 			  HomePageHelper.waitHomePageToLoad(timeOut,seleniumUtil);
-			  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_BUTTON_LOGIN));
+			  HomePageHelper.enterPage(seleniumUtil, HomePage.HP_BUTTON_LOGIN);
 			  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
 			  LoginPageHelper.checkLoginPageText(seleniumUtil);
 			  LoginPageHelper.isInputCorrect(seleniumUtil);

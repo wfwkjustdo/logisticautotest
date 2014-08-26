@@ -21,10 +21,10 @@ public class LoginPage_8_EXIT_Test extends BaseParpare{
 	  int sleepTime =Integer.valueOf(context.getCurrentXmlTest().getParameter("sleepTime"));
 
 	  HomePageHelper.waitHomePageToLoad(timeOut,seleniumUtil);
-	  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_BUTTON_LOGIN));
+	  HomePageHelper.enterPage(seleniumUtil, HomePage.HP_BUTTON_LOGIN);
 	  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
 	  LoginPageHelper.checkLoginPageText(seleniumUtil);
-	  seleniumUtil.login(username, passcode);
+	  LoginPageHelper.login(seleniumUtil, username, passcode);
 	  LoginPageHelper.verifyUserInfo(timeOut, sleepTime, seleniumUtil, username);
 	  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_BUTTON_EXIT));
   }

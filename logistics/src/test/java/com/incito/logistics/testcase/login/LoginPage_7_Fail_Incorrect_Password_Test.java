@@ -22,7 +22,7 @@ public class LoginPage_7_Fail_Incorrect_Password_Test extends BaseParpare{
 	  int waitMillisecondsForAlert =Integer.valueOf(context.getCurrentXmlTest().getParameter("waitMillisecondsForAlert"));
 
 	  HomePageHelper.waitHomePageToLoad(timeOut,seleniumUtil);
-	  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_BUTTON_LOGIN));
+	  HomePageHelper.enterPage(seleniumUtil, HomePage.HP_BUTTON_LOGIN);
 	  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
 	  seleniumUtil.clear(seleniumUtil.findElementBy(LoginPage.LP_INPUT_USERNAME));
 	  seleniumUtil.sendKeys(seleniumUtil.findElementBy(LoginPage.LP_INPUT_USERNAME), username);

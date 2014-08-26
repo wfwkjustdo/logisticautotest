@@ -20,7 +20,7 @@ public class LoginPage_3_Fail_All_Empty_Test extends BaseParpare{
 	  int waitMillisecondsForAlert =Integer.valueOf(context.getCurrentXmlTest().getParameter("waitMillisecondsForAlert"));
 
 	  HomePageHelper.waitHomePageToLoad(timeOut,seleniumUtil);
-	  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_BUTTON_LOGIN));
+	  HomePageHelper.enterPage(seleniumUtil, HomePage.HP_BUTTON_LOGIN);
 	  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
 	  seleniumUtil.click(seleniumUtil.findElementBy(LoginPage.LP_BUTTON_LOGIN));
 	  AlertPageHelper.isAlertUsername(seleniumUtil,waitMillisecondsForAlert);
