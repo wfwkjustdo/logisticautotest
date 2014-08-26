@@ -5,6 +5,17 @@ import com.incito.logistics.util.SeleniumUtil;
 
 public class LoginPageHelper {
 	
+	/**登录操作*/
+	public static void login(SeleniumUtil seleniumUtil,String username, String password) {
+		seleniumUtil.clear(seleniumUtil.findElementBy(LoginPage.LP_INPUT_USERNAME));
+		seleniumUtil.sendKeys(seleniumUtil.findElementBy(LoginPage.LP_INPUT_USERNAME), username);
+		seleniumUtil.clear(seleniumUtil.findElementBy(LoginPage.LP_INPUT_PASSCODE));
+		seleniumUtil.sendKeys(seleniumUtil.findElementBy(LoginPage.LP_INPUT_PASSCODE), password);
+		seleniumUtil.click(seleniumUtil.findElementBy(LoginPage.LP_BUTTON_LOGIN));
+
+	}
+	
+	
 	/**待页面元素加载出来*/
 	public static void waitLPageToLoad(int timeOut,SeleniumUtil seleniumUtil){
 		seleniumUtil.waitForElementToLoad(timeOut,LoginPage.LP_CHECKBOX_AUTO);
