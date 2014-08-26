@@ -12,6 +12,7 @@ import com.incito.logistics.pages.HomePage;
 import com.incito.logistics.pages.LoginPage;
 import com.incito.logistics.pages.pageshelper.FindCarsPagerHelper;
 import com.incito.logistics.pages.pageshelper.HomePageHelper;
+import com.incito.logistics.pages.pageshelper.LoginPageHelper;
 
 public class HomePage_Login_14_AllTabClick_Test extends BaseParpare{
 	
@@ -24,7 +25,7 @@ public class HomePage_Login_14_AllTabClick_Test extends BaseParpare{
 	  HomePageHelper.waitHomePageToLoad(timeOut,seleniumUtil);
 	  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_BUTTON_LOGIN));
 	  isDisplay(timeOut);
-	  seleniumUtil.login(username, passcode);
+	  LoginPageHelper.login(seleniumUtil, username, passcode);
 	  verifyUserInfo(timeOut,sleepTime);
 	  verifyAllTab(timeOut);
   }
