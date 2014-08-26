@@ -22,9 +22,9 @@ public class LoginPage_2_Success_Test extends BaseParpare{
 	  
 	  HomePageHelper.waitHomePageToLoad(timeOut,seleniumUtil);
 	  HomePageHelper.enterPage(seleniumUtil, HomePage.HP_BUTTON_LOGIN);
-	  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
+	  LoginPageHelper.waitLoginPageToLoad(timeOut, seleniumUtil);
 	  LoginPageHelper.login(seleniumUtil, username, passcode);
-	  LoginPageHelper.verifyUserInfo(timeOut, sleepTime, seleniumUtil, username);
+	  LoginPageHelper.checkUserInfo(timeOut, sleepTime, seleniumUtil, username);
   }
   
 }

@@ -21,9 +21,9 @@ public class LoginPage_3_Fail_All_Empty_Test extends BaseParpare{
 
 	  HomePageHelper.waitHomePageToLoad(timeOut,seleniumUtil);
 	  HomePageHelper.enterPage(seleniumUtil, HomePage.HP_BUTTON_LOGIN);
-	  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
+	  LoginPageHelper.waitLoginPageToLoad(timeOut, seleniumUtil);
 	  seleniumUtil.click(seleniumUtil.findElementBy(LoginPage.LP_BUTTON_LOGIN));
-	  AlertPageHelper.isAlertUsername(seleniumUtil,waitMillisecondsForAlert);
-  }
+	  AlertPageHelper.checkAlertInfo(seleniumUtil, waitMillisecondsForAlert);
 
+}
 }

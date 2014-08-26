@@ -20,7 +20,7 @@ public class HomePage_NotLogin_13_GoodFav_Test extends BaseParpare {
 		  seleniumUtil.mouseMoveToElement(HomePage.HP_ARERA_GOODS1);
 		  isBcolorChange();
 		  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_GOODS1_FAV));
-		  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
+		  LoginPageHelper.waitLoginPageToLoad(timeOut, seleniumUtil);
 		  LoginPageHelper.checkLoginPageText(seleniumUtil);
 		
 	}

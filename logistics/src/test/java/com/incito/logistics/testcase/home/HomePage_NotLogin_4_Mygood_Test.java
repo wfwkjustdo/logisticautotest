@@ -20,7 +20,7 @@ public class HomePage_NotLogin_4_Mygood_Test extends BaseParpare {
 		  HomePageHelper.waitHomePageToLoad(timeOut, seleniumUtil);
 		  HomePageHelper.checkHomePageText(seleniumUtil);
 		  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_LINK_MYGOODS));
-		  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
+		  LoginPageHelper.waitLoginPageToLoad(timeOut, seleniumUtil);
 		  LoginPageHelper.checkLoginPageText(seleniumUtil);
 		  seleniumUtil.click(seleniumUtil.findElementBy(LoginPage.LP_BUTTON_CLOSE));
 	

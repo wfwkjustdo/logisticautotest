@@ -19,7 +19,7 @@ public class HomePage_NotLogin_11_Loc_Test extends BaseParpare {
 		  HomePageHelper.waitHomePageToLoad(timeOut, seleniumUtil);
 		  seleniumUtil.mouseMoveToElement(HomePage.HP_AREAR_CARS1);
 		  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_CARS1_LOC));
-		  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
+		  LoginPageHelper.waitLoginPageToLoad(timeOut, seleniumUtil);
 		  LoginPageHelper.checkLoginPageText(seleniumUtil);
 		
 	}

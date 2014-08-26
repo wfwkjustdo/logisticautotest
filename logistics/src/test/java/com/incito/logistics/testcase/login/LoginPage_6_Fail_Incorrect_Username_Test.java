@@ -23,13 +23,13 @@ public class LoginPage_6_Fail_Incorrect_Username_Test extends BaseParpare{
 
 	  HomePageHelper.waitHomePageToLoad(timeOut,seleniumUtil);
 	  HomePageHelper.enterPage(seleniumUtil, HomePage.HP_BUTTON_LOGIN);
-	  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
+	  LoginPageHelper.waitLoginPageToLoad(timeOut, seleniumUtil);
 	  seleniumUtil.clear(seleniumUtil.findElementBy(LoginPage.LP_INPUT_USERNAME));
 	  seleniumUtil.sendKeys(seleniumUtil.findElementBy(LoginPage.LP_INPUT_USERNAME), username);
 	  seleniumUtil.clear(seleniumUtil.findElementBy(LoginPage.LP_INPUT_PASSCODE));
 	  seleniumUtil.sendKeys(seleniumUtil.findElementBy(LoginPage.LP_INPUT_PASSCODE), password);
 	  seleniumUtil.click(seleniumUtil.findElementBy(LoginPage.LP_BUTTON_LOGIN));
-	  AlertPageHelper.isAlertNameAndCode(seleniumUtil, waitMillisecondsForAlert);
+	  AlertPageHelper.checkAlertInfo(seleniumUtil, waitMillisecondsForAlert);
 	  
   }
   

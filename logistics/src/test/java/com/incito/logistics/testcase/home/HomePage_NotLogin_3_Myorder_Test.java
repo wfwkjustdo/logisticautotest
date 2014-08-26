@@ -20,7 +20,7 @@ public class HomePage_NotLogin_3_Myorder_Test extends BaseParpare {
 		  HomePageHelper.waitHomePageToLoad(timeOut, seleniumUtil);
 		  HomePageHelper.checkHomePageText(seleniumUtil);
 		  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_LINK_MYORDER));
-		  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
+		  LoginPageHelper.waitLoginPageToLoad(timeOut, seleniumUtil);
 		  LoginPageHelper.checkLoginPageText(seleniumUtil);
 		  seleniumUtil.click(seleniumUtil.findElementBy(LoginPage.LP_BUTTON_CLOSE));
 		

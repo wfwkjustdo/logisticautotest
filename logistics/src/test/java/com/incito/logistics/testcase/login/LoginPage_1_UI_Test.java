@@ -19,9 +19,9 @@ public class LoginPage_1_UI_Test extends BaseParpare {
 
 			  HomePageHelper.waitHomePageToLoad(timeOut,seleniumUtil);
 			  HomePageHelper.enterPage(seleniumUtil, HomePage.HP_BUTTON_LOGIN);
-			  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
+			  LoginPageHelper.waitLoginPageToLoad(timeOut, seleniumUtil);
 			  LoginPageHelper.checkLoginPageText(seleniumUtil);
-			  LoginPageHelper.isInputCorrect(seleniumUtil);
+			  LoginPageHelper.checkInputData(seleniumUtil);
 
 	}
 

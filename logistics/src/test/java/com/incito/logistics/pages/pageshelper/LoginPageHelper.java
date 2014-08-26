@@ -1,4 +1,6 @@
 package com.incito.logistics.pages.pageshelper;
+import org.openqa.selenium.By;
+
 import com.incito.logistics.pages.HomePage;
 import com.incito.logistics.pages.LoginPage;
 import com.incito.logistics.util.SeleniumUtil;
@@ -17,7 +19,7 @@ public class LoginPageHelper {
 	
 	
 	/**待页面元素加载出来*/
-	public static void waitLPageToLoad(int timeOut,SeleniumUtil seleniumUtil){
+	public static void waitLoginPageToLoad(int timeOut,SeleniumUtil seleniumUtil){
 		seleniumUtil.waitForElementToLoad(timeOut,LoginPage.LP_CHECKBOX_AUTO);
 		seleniumUtil.waitForElementToLoad(timeOut,LoginPage.LP_INPUT_USERNAME);
 		seleniumUtil.waitForElementToLoad(timeOut,LoginPage.LP_INPUT_PASSCODE);
@@ -39,7 +41,7 @@ public class LoginPageHelper {
 	}
 	
 	/**判断输入登陆界面框输入是否正确*/
-	public static void isInputCorrect(SeleniumUtil seleniumUtil){
+	public static void checkInputData(SeleniumUtil seleniumUtil){
 		//设置用户名
 		seleniumUtil.clear(seleniumUtil.findElementBy(LoginPage.LP_INPUT_USERNAME));
 		seleniumUtil.sendKeys(seleniumUtil.findElementBy(LoginPage.LP_INPUT_USERNAME), "AG00005");
@@ -52,10 +54,12 @@ public class LoginPageHelper {
 	}
 	
 	/**检查登陆成功后用户信息是不是正确的*/
-	public static void verifyUserInfo(int timeOut,int sleepTime,SeleniumUtil seleniumUtil,String username){
+	public static void checkUserInfo(int timeOut,int sleepTime,SeleniumUtil seleniumUtil,String username){
 		seleniumUtil.sleep(sleepTime);
 		seleniumUtil.waitForElementToLoad(timeOut,HomePage.HP_TEXT_USERINFO);
 		seleniumUtil.isTextEquals(seleniumUtil.findElementBy(HomePage.HP_TEXT_USERINFO).getText(), username+" | 退出");
 	}
+	
+	
 
 }

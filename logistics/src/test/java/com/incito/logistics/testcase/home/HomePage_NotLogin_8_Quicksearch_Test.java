@@ -18,7 +18,7 @@ public class HomePage_NotLogin_8_Quicksearch_Test extends BaseParpare {
 		  int timeOut =Integer.valueOf(context.getCurrentXmlTest().getParameter("timeOut"));
 		  HomePageHelper.waitHomePageToLoad(timeOut, seleniumUtil);
 		  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_BUTTON_SEARCH1));
-		  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
+		  LoginPageHelper.waitLoginPageToLoad(timeOut, seleniumUtil);
 		  LoginPageHelper.checkLoginPageText(seleniumUtil);
 		
 	}

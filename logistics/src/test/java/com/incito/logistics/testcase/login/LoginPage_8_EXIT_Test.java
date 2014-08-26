@@ -22,10 +22,10 @@ public class LoginPage_8_EXIT_Test extends BaseParpare{
 
 	  HomePageHelper.waitHomePageToLoad(timeOut,seleniumUtil);
 	  HomePageHelper.enterPage(seleniumUtil, HomePage.HP_BUTTON_LOGIN);
-	  LoginPageHelper.waitLPageToLoad(timeOut, seleniumUtil);
+	  LoginPageHelper.waitLoginPageToLoad(timeOut, seleniumUtil);
 	  LoginPageHelper.checkLoginPageText(seleniumUtil);
 	  LoginPageHelper.login(seleniumUtil, username, passcode);
-	  LoginPageHelper.verifyUserInfo(timeOut, sleepTime, seleniumUtil, username);
+	  LoginPageHelper.checkUserInfo(timeOut, sleepTime, seleniumUtil, username);
 	  seleniumUtil.click(seleniumUtil.findElementBy(HomePage.HP_BUTTON_EXIT));
   }
   
