@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import org.testng.ITestResult;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -24,8 +24,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestContext;
+import org.testng.ITestResult;
 
-import com.incito.logistics.pages.LoginPage;
 import com.netease.qa.testng.TestResultListener;
 
 public class SeleniumUtil {
@@ -320,17 +320,6 @@ public class SeleniumUtil {
 
 	}
 
-	/**
-	 * 登陆操作包装
-	 * */
-	public void login(String username, String password) {
-		clear(findElementBy(LoginPage.LP_INPUT_USERNAME));
-		sendKeys(findElementBy(LoginPage.LP_INPUT_USERNAME), username);
-		clear(findElementBy(LoginPage.LP_INPUT_PASSCODE));
-		sendKeys(findElementBy(LoginPage.LP_INPUT_PASSCODE), password);
-		click(findElementBy(LoginPage.LP_BUTTON_LOGIN));
-
-	}
 
 	/**
 	 * get方法包装
