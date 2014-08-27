@@ -8,5 +8,6 @@
 /result/log/*.log
 /result/log
 /result
+/.classpath
 
 
