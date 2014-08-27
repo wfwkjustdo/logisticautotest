@@ -1,6 +1,4 @@
 package com.incito.logistics.pages.pageshelper;
-import org.openqa.selenium.By;
-
 import com.incito.logistics.pages.HomePage;
 import com.incito.logistics.pages.LoginPage;
 import com.incito.logistics.util.SeleniumUtil;
